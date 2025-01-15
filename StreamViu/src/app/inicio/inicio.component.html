@@ -1,0 +1,7 @@
+<h1>Bienvenidos a la pagina de inicio de la {{titulo}}</h1>
+<button (click)=pulsar()>Pulsar</button>
+
+@if(pulsaciones>0){
+    <p>Has Pulsado {{pulsaciones}} veces</p>
+    <button (click)=resetPulsaciones()>Reset</button>
+}
