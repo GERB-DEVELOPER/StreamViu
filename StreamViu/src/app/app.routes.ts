@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
-import { MusicaComponent } from './musica/musica.component';
-import { CineComponent } from './cine/cine.component';
-import { LibrosComponent } from './libros/libros.component';
-import { PostcastsComponent } from './postcasts/postcasts.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { ErrorComponent } from './error/error.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { MusicaComponent } from './components/musica/musica.component';
+import { CineComponent } from './components/cine/cine.component';
+import { LibrosComponent } from './components/libros/libros.component';
+import { PostcastsComponent } from './components/postcasts/postcasts.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { ErrorComponent } from './components/error/error.component';
 
 export const routes: Routes = [
 

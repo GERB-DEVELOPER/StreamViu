@@ -1,0 +1,18 @@
+
+<h1>Discos Disponibles</h1>
+@for (record of records;track $index){
+        <h2>{{record.title}}</h2>
+        <h3>{{record.artist | uppercase}}</h3>
+        <h3
+            [ngClass]="{
+                'green':record.year>2010,
+                'orange':record.year<=2010
+            }"
+        >{{record.year}}       
+        </h3>
+        <img src={{record.image_path}} alt={{record.title}}>
+        @for(song of record.songs;track $index){
+            <p>{{song.track}}. <span>{{song.title}}</span></p>
+        }
+        <hr *ngIf="$index<records.length-1">
+}
