@@ -1,17 +1,20 @@
+import { CancionComponent } from './../cancion/cancion.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Disco } from '../../models/disco';
 import { Cancion } from '../../models/cancion';
 @Component({
   selector: 'app-musica',
-  imports: [CommonModule],
+  imports: [CommonModule,CancionComponent],
   templateUrl: './musica.component.html',
   styleUrl: './musica.component.css',
 })
 export class MusicaComponent {
   public records: Array<any>;
+  public playing :string;
 
   constructor() {
+    this.playing="";
     this.records = [
       new Disco(
         1,
@@ -240,5 +243,13 @@ export class MusicaComponent {
       ),
     ];
   }
-  // //////////////////////////
+
+reproducirCancion(song:Cancion):void{
+console.log("-----------");
+this.playing=song.artist+" . " + song.title;
+let audioplayer=document.getElementById("audio_player") as HTMLAudioElement;
+audioplayer?.setAttribute('src',song.path);
+audioplayer.play();
+}
+// //////////////////////////
 }

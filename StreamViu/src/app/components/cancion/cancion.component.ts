@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input,Output } from '@angular/core';
+import { Cancion } from '../../models/cancion';
 
 @Component({
   selector: 'app-cancion',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './cancion.component.css'
 })
 export class CancionComponent {
+@Input() public song:Cancion=new Cancion(0,0,"","","",0);
+@Output() songToPlay = new EventEmitter();
+
+reproducirCancion():void{
+  this.songToPlay.emit(this.song);
+
+}
+
+
 
 }

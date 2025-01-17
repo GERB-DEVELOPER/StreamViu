@@ -1,4 +1,9 @@
-
+<div>
+    <h1>Musica VIU</h1>
+    <audio id="audio_player" controls></audio>
+    <p>Reproduciendo : {{playing}}</p>
+</div>
+<hr>
 <h1>Discos Disponibles</h1>
 @for (record of records;track $index){
         <h2>{{record.title}}</h2>
@@ -11,8 +16,9 @@
         >{{record.year}}       
         </h3>
         <img src={{record.image_path}} alt={{record.title}}>
-        @for(song of record.songs;track $index){
-            <p>{{song.track}}. <span>{{song.title}}</span></p>
+        @for(song2 of record.songs;track $index){
+            <app-cancion [song]=song2 (songToPlay)="reproducirCancion($event)"></app-cancion>
+            <!-- <p>{{song.track}}. <span>{{song.title}}</span></p> -->
         }
         <hr *ngIf="$index<records.length-1">
 }
