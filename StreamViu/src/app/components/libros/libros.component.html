@@ -1,1 +1,15 @@
-<p>libros works!</p>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title class="titulo">{{ titulo }} </mat-card-title>
+    <mat-card-subtitle>{{ autor }}</mat-card-subtitle>
+    <img mat-card-lg-image [src]="ruta" />
+  </mat-card-header>
+  <mat-card-content>
+    {{ sinopsis }}
+  </mat-card-content>
+  <mat-card-actions class="botones">
+    <button mat-flat-button>Ver</button>
+    <button mat-flat-button>Editar</button>
+    <button mat-flat-button>Eliminar</button>
+  </mat-card-actions>
+</mat-card>
