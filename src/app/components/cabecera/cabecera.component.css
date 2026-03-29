@@ -1,27 +1,34 @@
-header div.fondo_titulo {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Abstract_blue_background7.jpg/800px-Abstract_blue_background7.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
+.navbar {
+  background: rgba(15, 12, 41, 0.97);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(129, 140, 248, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header div.fondo_titulo span{
-    font-weight: bold;
-    color: white;
-    vertical-align: middle;
-    line-height: normal;
-    font-size: 36px;
-    background-color: rgba(214, 122, 18, 0.205);
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
-header.titulo_principal h1{
-    margin: 0px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    background-color: #e3e1ec;
+.brand-icon {
+  font-size: 1.4rem;
+  color: #818cf8;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.brand-accent {
+  color: #c084fc;
 }
