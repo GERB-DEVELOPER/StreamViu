@@ -20,7 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build
+        run: npm run build -- --base-href /StreamViu/
+      - name: Copy 404.html for Angular routing
+        run: cp dist/stream-viu/browser/index.html dist/stream-viu/browser/404.html
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
