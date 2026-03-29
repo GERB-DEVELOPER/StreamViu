@@ -1,7 +1,7 @@
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 520px;
+  height: 360px;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   display: flex;
   align-items: center;
@@ -145,6 +145,6 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .hero-title { font-size: 2rem; }
-  .hero { height: 420px; }
+  .hero { height: 280px; }
   .categorias { padding: 40px 20px; }
 }
