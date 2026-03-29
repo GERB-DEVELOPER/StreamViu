@@ -1,7 +1,45 @@
-<h1>Bienvenidos a la pagina de inicio de la {{titulo}}</h1>
-<button (click)=pulsar()>Pulsar</button>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Bienvenido a <span class="hero-brand">StreamViu</span></h1>
+    <p class="hero-subtitle">Tu plataforma de entretenimiento: música, cine, libros y podcasts en un solo lugar.</p>
+    <a routerLink="/musica" class="hero-btn">Explorar ahora</a>
+  </div>
+</section>
 
-@if(pulsaciones>0){
-    <p>Has Pulsado {{pulsaciones}} veces</p>
-    <button (click)=resetPulsaciones()>Reset</button>
-}
+<!-- CATEGORÍAS -->
+<section class="categorias">
+  <h2 class="categorias-titulo">¿Qué quieres ver hoy?</h2>
+  <div class="cards-grid">
+
+    <a routerLink="/musica" class="card card-musica">
+      <div class="card-icon">🎵</div>
+      <h3>Música</h3>
+      <p>Descubre álbumes y canciones de todos los géneros.</p>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a routerLink="/cine" class="card card-cine">
+      <div class="card-icon">🎬</div>
+      <h3>Cine</h3>
+      <p>Las mejores películas organizadas por género.</p>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a routerLink="/libros" class="card card-libros">
+      <div class="card-icon">📚</div>
+      <h3>Libros</h3>
+      <p>Explora nuestra colección de títulos imprescindibles.</p>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a routerLink="/postcasts" class="card card-podcasts">
+      <div class="card-icon">🎙️</div>
+      <h3>Podcasts</h3>
+      <p>Escucha los mejores podcasts en cualquier momento.</p>
+      <span class="card-arrow">→</span>
+    </a>
+
+  </div>
+</section>
