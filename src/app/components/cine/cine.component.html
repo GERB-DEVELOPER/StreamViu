@@ -1,5 +1,35 @@
-<p>cine works!</p>
-@if(genero){
-    <p>Este es el genero :{{genero}}</p>
+<!-- HEADER -->
+<section class="cine-header">
+  <h1 class="cine-titulo">🎬 Cine</h1>
+  <p class="cine-subtitulo">Explora las mejores películas por género</p>
+</section>
 
-}
+<!-- FILTROS DE GÉNERO -->
+<section class="generos-bar">
+  @for (g of generos; track g.id) {
+    <a [routerLink]="g.id === 'todos' ? ['/cine'] : ['/cine', g.id]"
+       class="genero-chip"
+       [class.activo]="generoActivo === g.id">
+      {{ g.label }}
+    </a>
+  }
+</section>
+
+<!-- GRID DE PELÍCULAS -->
+<section class="peliculas-grid">
+  @for (peli of peliculasFiltradas; track peli.titulo) {
+    <div class="peli-card" [style.background]="peli.color">
+      <div class="peli-icono">{{ peli.icono }}</div>
+      <div class="peli-info">
+        <h3>{{ peli.titulo }}</h3>
+        <span class="peli-año">{{ peli.anio }}</span>
+        <p class="peli-sinopsis">{{ peli.sinopsis }}</p>
+        <span class="peli-genero-tag">{{ peli.genero }}</span>
+      </div>
+    </div>
+  }
+
+  @if (peliculasFiltradas.length === 0) {
+    <p class="sin-resultados">No hay películas en este género aún.</p>
+  }
+</section>

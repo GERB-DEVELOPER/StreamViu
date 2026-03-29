@@ -1,0 +1,136 @@
+/* ===== HEADER ===== */
+.cine-header {
+  background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
+  padding: 40px 40px 30px;
+  color: white;
+}
+
+.cine-titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.cine-subtitulo {
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ===== GÉNEROS ===== */
+.generos-bar {
+  background: #0f0c29;
+  padding: 16px 40px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(129,140,248,0.2);
+}
+
+.genero-chip {
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s;
+}
+
+.genero-chip:hover {
+  background: rgba(129,140,248,0.2);
+  color: white;
+}
+
+.genero-chip.activo {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  color: white;
+  border-color: transparent;
+}
+
+/* ===== GRID PELÍCULAS ===== */
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 32px 40px;
+  background: #0a0a1a;
+  min-height: 400px;
+}
+
+/* ===== CARD ===== */
+.peli-card {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.peli-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.peli-icono {
+  font-size: 3.5rem;
+  padding: 28px 28px 16px;
+  text-align: center;
+}
+
+.peli-info {
+  padding: 0 24px 24px;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.peli-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.peli-año {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 10px;
+}
+
+.peli-sinopsis {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.peli-genero-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+
+.sin-resultados {
+  color: rgba(255,255,255,0.4);
+  font-size: 1rem;
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .peliculas-grid { padding: 20px; }
+  .generos-bar { padding: 12px 20px; }
+  .cine-header { padding: 28px 20px; }
+}
